@@ -5,9 +5,11 @@ import java.util.Map;
 
 public class EasyMap {
 	
-	private String firstname;
-	private String secondname;
-	private String thirdname;
+	private String firstname = null;
+	private String secondname = null;
+	private String thirdname = null;
+	
+	private String msg = "This value doesn't exists!";
 	
 	public void createHashMap(String firstname, String secondname, String thirdname, Integer firstnum, Integer secondnum, Integer thirdnum) {
 		Map<String, Integer> hm = new HashMap<>();
@@ -32,7 +34,13 @@ public class EasyMap {
 			System.out.println(secondname);
 		}else if(value == thirdname) {
 			System.out.println(thirdname);
+		}else {
+			System.out.println(msg);
 		}
+	}
+	
+	public void changeErrorMessage(String msg) {
+		this.msg = msg;
 	}
 
 }
